@@ -1,0 +1,32 @@
+{
+  "name": "couch-potato",
+  "version": "0.1.0",
+  "description": "Easy way to lazy load images. Dependency free.",
+  "main": "dist/couch-potato.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netshoes/couch-potato"
+  },
+  "keywords": [
+    "lazy",
+    "load",
+    "image",
+    "couch",
+    "potato"
+  ],
+  "author": "Netshoes Front-End Team <atg-fe@netshoes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netshoes/couch-potato/issues"
+  },
+  "homepage": "https://github.com/netshoes/couch-potato",
+  "devDependencies": {
+    "jshint": "^2.6.0",
+    "jshint-stylish": "^1.0.0",
+    "mocha": "^2.1.0",
+    "uglify-js": "^2.4.16"
+  }
+}

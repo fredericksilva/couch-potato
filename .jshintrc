@@ -1,0 +1,84 @@
+//
+// JSHint documentation
+// http://www.jshint.com/docs/options
+//
+{
+    // ------------------------------------------------------------
+    // Enforcing
+    // ------------------------------------------------------------
+
+    // Force variables to be defined with camelCase or CONSTANT notation
+    "camelcase": true,
+
+    // Always close blocks with curly braces
+    "curly": true,
+
+    // Strict equality please
+    "eqeqeq": true,
+
+    // Doesn't allow overriding native objects prototype methods
+    "freeze": true,
+
+    // Immediate functions should be wrapped within parenthesis
+    "immed": true,
+
+    // Indentation is serious business
+    "indent": 2,
+
+    // Always define variables before using them
+    "latedef": true,
+
+    // Prohibits the use of `arguments.caller` and `arguments.callee`
+    "noarg": true,
+
+    // Enforce the use of single quotation mark everywhere
+    "quotmark": "single",
+
+    // Prohibits the use of non declared variables
+    "undef": true,
+
+    // Warns when there are variables that are not in use
+    "unused": true,
+
+    // Require strict pragma to be set
+    "strict": true,
+
+    // Warns when there are trailing whitespaces on the code
+    "trailing": true,
+
+    // ------------------------------------------------------------
+    // Relaxing
+    // ------------------------------------------------------------
+
+    // Doesn't complain about `null` comparisons
+    "eqnull": true,
+
+    // `eval()` is evil!
+    "evil": true,
+
+    // Allow ternaries to call methods
+    "expr": true,
+
+    // Doesn't allow "weird" constructor calls
+    "supernew": true,
+
+    // ------------------------------------------------------------
+    // Legacy
+    // ------------------------------------------------------------
+
+    // Enforces single var definition
+    "onevar": true,
+
+    // ------------------------------------------------------------
+    // Environment
+    // ------------------------------------------------------------
+
+    // Define globals exposed by modern browsers
+    "browser": true,
+
+    // Define globals used to debug such as `console` and `alert`
+    "devel": true,
+
+    // Define widely adopted globals such as `escape` and `unescape`
+    "nonstandard": true
+}

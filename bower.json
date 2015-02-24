@@ -1,0 +1,27 @@
+{
+  "name": "couch-potato",
+  "version": "0.1.0",
+  "author": "Netshoes Front-End Team <atg-fe@netshoes.com>",
+  "homepage": "http://github.com/netshoes/couch-potato",
+  "description": "Easy way to lazy load images. Dependency free.",
+  "main": "dist/couch-potato.js",
+  "moduleType": [
+    "globals",
+    "amd"
+  ],
+  "keywords": [
+    "lazy",
+    "load",
+    "image",
+    "couch",
+    "potato"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
