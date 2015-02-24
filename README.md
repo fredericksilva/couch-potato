@@ -60,9 +60,11 @@ One last thing that you should notice is that `trigger` receives two parameters:
 
 # Options
 
-* **`attribute`**: The attribute used by `couch-potato` to read the image source;
-* **`shouldRemoveDataAttribute`**: Whether or not the data attribute should be removed after image load (defaults to `true`);
-* **`trigger`**: Lazy load strategy (will receive `image` and `source` as arguments).
+name | type | default | description
+---|---
+`attribute` | `String` | `data-couch-potato` | The attribute used by `couch-potato` to read the image source
+`shouldRemoveDataAttribute` | `Boolean` | `true` | Whether or not the data attribute should be removed after image load
+`trigger` | `Function` | `null` | Lazy load strategy (will receive `image` and `source` as arguments)
 
 # Building your own
 
