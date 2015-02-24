@@ -28,6 +28,11 @@
     });
 
     this.context = context;
+
+    // Set `src` to `//:0` by default so the markup is valid
+    // See: http://stackoverflow.com/a/5775621/339827
+    this.context.setAttribute('src', '//:0');
+
     this.source = this.context.getAttribute(this.options.attribute);
 
     // Setup trigger function
