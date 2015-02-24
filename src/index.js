@@ -5,12 +5,11 @@
  * Version: {version}
  */
 
+/* global define */
+
 (function(global) {
 
   'use strict';
-
-  // Debug mode
-  CouchPotato.DEBUG = false;
 
   /**
    * Easy way to lazy load images. Dependency free.
@@ -77,10 +76,13 @@
 
     if (this.options.shouldRemoveDataAttribute) {
       this.context.removeAttribute(this.options.attribute);
-    };
+    }
 
     return this;
   };
+
+  // Debug mode
+  CouchPotato.DEBUG = false;
 
   // Exports to AMD
   if (typeof define === 'function' && define.amd) {
