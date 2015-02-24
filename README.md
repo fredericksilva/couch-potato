@@ -72,6 +72,12 @@ To build your own version, you must have [Node.js](http://nodejs.org) installed.
 make build
 ```
 
+## Running tests
+
+```sh
+make test
+```
+
 # Contributing
 
 1. Fork the repository
