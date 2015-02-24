@@ -18,10 +18,15 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
+    ".editorconfig",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "CHANGELOG.md",
+    "Makefile",
+    "package.json",
     "node_modules",
-    "bower_components",
-    "test",
+    "src",
     "tests"
   ]
 }
