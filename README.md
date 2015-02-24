@@ -78,13 +78,20 @@ make build
 make test
 ```
 
+## Running linter
+
+```sh
+make lint
+```
+
 # Contributing
 
 1. Fork the repository
 2. Create a feature branch (E.g.: `feature/my-awesome-feature`)
 3. Do whatever you have to do (adding tests if necessary)
 4. Make sure tests are OK
-5. Submit a pull request describing the changes you have made (be descriptive, please)
+5. Make sure linting is OK
+6. Submit a pull request describing the changes you have made (be descriptive, please)
 
 # License
 
