@@ -5,12 +5,11 @@
  * Version: 0.1.0
  */
 
+/* global define */
+
 (function(global) {
 
   'use strict';
-
-  // Debug mode
-  CouchPotato.DEBUG = false;
 
   /**
    * Easy way to lazy load images. Dependency free.
@@ -29,6 +28,11 @@
     });
 
     this.context = context;
+
+    // Set `src` to `//:0` by default so the markup is valid
+    // See: http://stackoverflow.com/a/5775621/339827
+    this.context.setAttribute('src', '//:0');
+
     this.source = this.context.getAttribute(this.options.attribute);
 
     // Setup trigger function
@@ -77,10 +81,13 @@
 
     if (this.options.shouldRemoveDataAttribute) {
       this.context.removeAttribute(this.options.attribute);
-    };
+    }
 
     return this;
   };
+
+  // Debug mode
+  CouchPotato.DEBUG = false;
 
   // Exports to AMD
   if (typeof define === 'function' && define.amd) {
