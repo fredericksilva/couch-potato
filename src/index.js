@@ -18,69 +18,27 @@
    * @param {Object} options Configuration options
    */
   function CouchPotato(context, options) {
-    this._log('[CouchPotato] constructor', options);
-
-    // Setup default options
-    this.options = this._defaults(options, {
-      attribute: 'data-couch-potato',
-      shouldRemoveDataAttribute: true,
-      trigger: function() {}
-    });
-
     this.context = context;
 
-    // Set `src` to `//:0` by default so the markup is valid
-    // See: http://stackoverflow.com/a/5775621/339827
-    this.context.setAttribute('src', '//:0');
+    this.attribute = this.options.attribute || 'data-couch-potato';
+    this.shouldRemoveDataAttribute = this.options.shouldRemoveDataAttribute || true
+    this.trigger = this.options.trigger || function() {};
 
     this.source = this.context.getAttribute(this.options.attribute);
 
     // Setup trigger function
-    this.options.trigger.call(this, this.context, this.source);
+    this.trigger.call(this, this.context, this.source);
   }
-
-  /**
-   * Simple defaults implementation (IE9+), similar to Underscore's `_.default`.
-   *
-   * @param {Object} object     Original object
-   * @param {Object} properties Default properties
-   * @return {Object} A new object with the defaults applied to it
-   */
-  CouchPotato.prototype._defaults = function(object, properties) {
-    var keys = Object.keys(properties),
-        newObject = Object.create(object);
-
-    keys.forEach(function(key) {
-      if(!object.hasOwnProperty(key)) {
-        newObject[key] = properties[key];
-      }
-    });
-
-    return newObject;
-  };
-
-  /**
-   * Internal logging system.
-   */
-  CouchPotato.prototype._log = function() {
-    var message = Array.prototype.slice.call(arguments);
-
-    if(CouchPotato.DEBUG) {
-      console.log.apply(console, message);
-    }
-  };
 
   /**
    * Actually make the image request.
    * @return {CouchPotato} CouchPotato instance.
    */
   CouchPotato.prototype.load = function() {
-    this._log('[CouchPotato] :: load() :: Lazy load image', this.source);
-
     this.context.setAttribute('src', this.source);
 
-    if (this.options.shouldRemoveDataAttribute) {
-      this.context.removeAttribute(this.options.attribute);
+    if (this.shouldRemoveDataAttribute) {
+      this.context.removeAttribute(this.attribute);
     }
 
     return this;
